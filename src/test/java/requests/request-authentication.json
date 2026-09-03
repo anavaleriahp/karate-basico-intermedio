@@ -1,0 +1,13 @@
+{
+    "success": {
+        "username": "emilys",
+        "password": "emilyspass",
+        "expiresInMins": 60
+    },
+  "dev": {
+
+  },
+  "cert": {
+
+  }
+}

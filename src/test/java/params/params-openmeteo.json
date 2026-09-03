@@ -1,0 +1,7 @@
+{
+  latitude: "#(latitude)",
+  longitude: "#(longitude)",
+  hourly: 'temperature_2m,relative_humidity_2m',
+  forecast_days: 2,
+  timezone: 'auto'
+}
