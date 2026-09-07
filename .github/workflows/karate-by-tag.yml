@@ -7,7 +7,7 @@ on:
         description: "Agrega el tageo que deseas ejecutar"
         required: true
       karate_env:
-        description: "Karate environment"
+        description: "Ambiente de ejecución (dev, cert, prod)"
         required: true
         default: "dev"
 
