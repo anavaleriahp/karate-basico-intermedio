@@ -1,0 +1,43 @@
+name: Karate tests by tag
+
+on:
+  workflow_dispatch:
+    inputs:
+      karate_tag:
+        description: "Karate tag to run, for example @spotifyArtista, @gettokenspotify or @test1"
+        required: true
+        default: "@spotifyArtista"
+      karate_env:
+        description: "Karate environment"
+        required: true
+        default: "dev"
+
+jobs:
+  karate:
+    name: Run Karate tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: maven
+
+      - name: Run selected Karate tag
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+        run: mvn clean test -Dkarate.env=${{ inputs.karate_env }} "-Dkarate.options=--tags ${{ inputs.karate_tag }}"
+
+      - name: Upload Karate reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: karate-reports
+          path: target/karate-reports
+          if-no-files-found: ignore

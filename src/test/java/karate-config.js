@@ -6,8 +6,8 @@ function fn() {
   karate.log('karate.env system property was:', env);
 
   //credenciales
-  var spotify_client_id = karate.properties['spotify-client-id'];
-  var spotify_client_secret = karate.properties['spotify-client-secret'];
+  var spotify_client_id = karate.properties['spotify-client-id'] || java.lang.System.getenv('SPOTIFY_CLIENT_ID');
+  var spotify_client_secret = karate.properties['spotify-client-secret'] || java.lang.System.getenv('SPOTIFY_CLIENT_SECRET');
 
   if (!env) {
     env = 'dev';
