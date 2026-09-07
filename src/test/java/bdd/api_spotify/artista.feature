@@ -17,12 +17,16 @@ Feature: Validar Artistas de Spotify
       | 3TVXtAsR1Inumwj472S9r4 | Drake         |
       | 66CXWjxzNUsdJxJ2JdwvnR | Ariana Grande |
 
-  @spotifyArtista @ignore
+  @spotifyAlbums
   Scenario Outline: Se obtienen los albums del artista
     Given path 'v1/artists/<idArtista>/albums'
+    And param limit = 3
     When method GET
     Then status 200
-    * print 'Albums de '+ '<descripcion>' + response.items[0].name
+    And match response.items == '#[3]'
+    And match response.items[0].name == '#string'
+    And match response.items[0].type == 'album'
+    * print 'Album encontrado de <descripcion>:', response.items[0].name
     Examples:
       | idArtista              | descripcion   |
       | 66CXWjxzNUsdJxJ2JdwvnR | Ariana Grande |
