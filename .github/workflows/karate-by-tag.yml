@@ -4,9 +4,8 @@ on:
   workflow_dispatch:
     inputs:
       karate_tag:
-        description: "Karate tag to run, for example @spotifyArtista, @gettokenspotify or @test1"
+        description: "Agrega el tageo que deseas ejecutar"
         required: true
-        default: "@spotifyArtista"
       karate_env:
         description: "Karate environment"
         required: true
