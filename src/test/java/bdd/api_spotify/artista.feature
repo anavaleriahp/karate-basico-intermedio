@@ -17,7 +17,7 @@ Feature: Validar Artistas de Spotify
       | 3TVXtAsR1Inumwj472S9r4 | Drake         |
       | 66CXWjxzNUsdJxJ2JdwvnR | Ariana Grande |
 
-  @spotifyAlbums
+  @spotifyAlbumsxArtista
   Scenario Outline: Se obtienen los albums del artista
     Given path 'v1/artists/<idArtista>/albums'
     And param limit = 3
