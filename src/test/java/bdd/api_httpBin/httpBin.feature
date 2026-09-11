@@ -42,3 +42,15 @@ Feature: Envío de multipart/form-data
     And match response.form.comments == 'Tocar el timbre al llegar'
     # Se confirma que el cuerpo utilizó la codificación propia de un formulario HTML.
     And match response.headers['Content-Type'] contains 'application/x-www-form-urlencoded'
+
+
+  Scenario Outline: Enviar productos desde csv
+    Given path 'post'
+    And multipart field nombre = '<name>'
+    And multipart field category = '<category>'
+    When method post
+    Then status 200
+    * match response.form.nombre == '<name>'
+    * match response.form.category == '<category>'
+    Examples:
+      | read('classpath:files/products-large.csv') |

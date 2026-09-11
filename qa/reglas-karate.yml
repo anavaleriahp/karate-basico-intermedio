@@ -1,0 +1,47 @@
+version: 1
+
+privacidad:
+  permitir_datos_reales_del_banco: false
+  permitir_secretos_en_codigo: false
+  tipo_de_datos_de_prueba: ficticios
+
+etiquetas:
+  universales:
+    - "@componente"
+  sesion: "@sesion4"
+  ejercicio_2: "@ejercicio2"
+  ejercicio_3: "@ejercicio3"
+  tipos:
+    contrato: "@contrato"
+    base_de_datos: "@base-datos"
+    humo: "@humo"
+    regresion: "@regresion"
+    camino_feliz: "@camino-feliz"
+    negativo: "@negativo"
+
+nombres:
+  patron_id_escenario: "CP-<DOMINIO>-<NNN>"
+  patron_titulo_escenario: "[<ID>] <acción y resultado esperado>"
+  patron_titulo_feature: "[<API>] <objetivo de validación>"
+
+generacion:
+  exigir_matriz_de_cobertura: true
+  exigir_revision_humana: true
+  separar_contrato_y_reglas_de_negocio: true
+  conservar_estructura_del_proyecto: true
+  no_inventar_reglas_no_documentadas: true
+
+karate:
+  validar_estado_antes_del_cuerpo: true
+  preferir_esquema_reutilizable: true
+  prohibir_autocomparaciones: true
+  externalizar_urls_base: true
+  externalizar_credenciales: true
+
+base_de_datos:
+  usar_consultas_parametrizadas: true
+  comparar_solo_campos_estables: true
+  excluir_campos_volatiles:
+    - marcas de tiempo generadas
+    - identificadores de trazabilidad
+    - valores cifrados o enmascarados

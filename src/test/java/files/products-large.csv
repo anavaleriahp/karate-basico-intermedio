@@ -1,0 +1,41 @@
+id,sku,name,category,price,stock,active
+1,SKU-1001,Karate Gi Beginner,uniforms,129.90,30,true
+2,SKU-1002,Karate Gi Intermediate,uniforms,189.90,18,true
+3,SKU-1003,White Belt,belts,19.90,120,true
+4,SKU-1004,Yellow Belt,belts,19.90,95,true
+5,SKU-1005,Orange Belt,belts,19.90,88,true
+6,SKU-1006,Green Belt,belts,19.90,76,true
+7,SKU-1007,Blue Belt,belts,19.90,64,true
+8,SKU-1008,Brown Belt,belts,24.90,52,true
+9,SKU-1009,Black Belt,belts,49.90,14,true
+10,SKU-1010,Training Gloves,protection,79.90,33,true
+11,SKU-1011,Shin Guards,protection,89.90,25,true
+12,SKU-1012,Mouth Guard,protection,29.90,60,true
+13,SKU-1013,Focus Mitts,training,119.90,20,true
+14,SKU-1014,Kick Shield,training,159.90,12,true
+15,SKU-1015,Skipping Rope,conditioning,34.90,70,true
+16,SKU-1016,Resistance Bands,conditioning,44.90,55,true
+17,SKU-1017,Agility Ladder,conditioning,69.90,21,true
+18,SKU-1018,Cone Set,conditioning,39.90,47,true
+19,SKU-1019,Water Bottle,accessories,24.90,100,true
+20,SKU-1020,Sports Towel,accessories,29.90,86,true
+21,SKU-1021,Training Notebook,accessories,18.90,44,true
+22,SKU-1022,Dojo Backpack,accessories,99.90,17,true
+23,SKU-1023,Timer Clock,electronics,149.90,9,true
+24,SKU-1024,Digital Scale,electronics,139.90,8,true
+25,SKU-1025,Wireless Mouse,electronics,189.90,45,true
+26,SKU-1026,Tablet Stand,electronics,59.90,23,true
+27,SKU-1027,First Aid Kit,safety,89.90,11,true
+28,SKU-1028,Ice Pack,safety,14.90,66,true
+29,SKU-1029,Mat Cleaner,safety,39.90,31,true
+30,SKU-1030,Training Mat,training,219.90,7,true
+31,SKU-1031,Kata Guide Book,books,54.90,26,true
+32,SKU-1032,Kumite Rules Book,books,49.90,19,true
+33,SKU-1033,Whistle,accessories,12.90,58,true
+34,SKU-1034,Coach Clipboard,accessories,35.90,24,true
+35,SKU-1035,Score Cards,training,27.90,40,true
+36,SKU-1036,Medal Set,events,75.90,16,true
+37,SKU-1037,Certificate Paper,events,32.90,72,true
+38,SKU-1038,Trophy Small,events,64.90,13,true
+39,SKU-1039,Trophy Medium,events,94.90,10,true
+40,SKU-1040,Trophy Large,events,129.90,6,true

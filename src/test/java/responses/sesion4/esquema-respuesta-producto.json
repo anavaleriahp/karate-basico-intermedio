@@ -1,0 +1,9 @@
+{
+  "id": "#number",
+  "sku": "#string",
+  "nombre": "#string",
+  "categoria": "#string",
+  "precio": "#number",
+  "existencias": "#number",
+  "activo": "#boolean"
+}

@@ -8,6 +8,7 @@ function fn() {
   //credenciales
   var spotify_client_id = karate.properties['spotify-client-id'] || java.lang.System.getenv('SPOTIFY_CLIENT_ID');
   var spotify_client_secret = karate.properties['spotify-client-secret'] || java.lang.System.getenv('SPOTIFY_CLIENT_SECRET');
+  var urlBaseSesion4 = karate.properties['sesion4.urlBase'] || 'http://localhost:8089';
 
   if (!env) {
     env = 'dev';
@@ -29,7 +30,8 @@ function fn() {
       baseUrlTokenSpotify: 'https://accounts.spotify.com',
       baseUrlSpotify: 'https://api.spotify.com',
       spotify_client_id:spotify_client_id,
-      spotify_client_secret:spotify_client_secret
+      spotify_client_secret:spotify_client_secret,
+      urlBaseSesion4:urlBaseSesion4
    }
   return config;
 }
