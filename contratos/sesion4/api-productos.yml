@@ -1,0 +1,67 @@
+openapi: 3.0.3
+info:
+  title: API de productos - Sesión 4
+  version: 1.0.0
+  description: Contrato ficticio para practicar la generación controlada de pruebas.
+servers:
+  - url: http://localhost:8089
+paths:
+  /productos/{id}:
+    get:
+      operationId: obtenerProductoPorId
+      summary: Consultar un producto por identificador
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            minimum: 1
+      responses:
+        "200":
+          description: Producto encontrado
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Producto"
+        "404":
+          description: Producto no encontrado
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+components:
+  schemas:
+    Producto:
+      type: object
+      additionalProperties: false
+      required: [id, sku, nombre, categoria, precio, existencias, activo]
+      properties:
+        id:
+          type: integer
+        sku:
+          type: string
+          minLength: 1
+        nombre:
+          type: string
+          minLength: 1
+        categoria:
+          type: string
+        precio:
+          type: number
+          format: double
+          minimum: 0
+        existencias:
+          type: integer
+          minimum: 0
+        activo:
+          type: boolean
+    Error:
+      type: object
+      additionalProperties: false
+      required: [codigo, mensaje]
+      properties:
+        codigo:
+          type: string
+        mensaje:
+          type: string
